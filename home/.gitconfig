@@ -1,0 +1,19 @@
+[user]
+  name  = James Shipton
+  email = ionysis@gmail.com
+
+[alias]
+  co  = checkout
+  ri  = rebase --interactive --autosquash
+  rc  = rebase --continue
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+
+[github]
+  user = jamesshipton
+
+[init]
+  templatedir = ~/.git_template
+
