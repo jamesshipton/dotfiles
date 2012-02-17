@@ -1,15 +1,17 @@
 [[ -s "/Users/jamesshipton/.rvm/scripts/rvm" ]] && source "/Users/jamesshipton/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
-export AWS_ELB_HOME="/usr/local/Cellar/elb-tools/1.0.15.1/jars"
-export AWS_IAM_HOME="/usr/local/Cellar/aws-iam-tools/HEAD/jars"
-export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
-export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.4.1/jars"
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
-export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
-export AWS_CLOUDWATCH_HOME="/usr/local/Cellar/cloud-watch/1.0.12.1/jars"
-export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
+if [ -f $HOME/.aws-credentials-master ]; then
+	export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
+	export AWS_ELB_HOME="/usr/local/Cellar/elb-tools/1.0.15.1/jars"
+	export AWS_IAM_HOME="/usr/local/Cellar/aws-iam-tools/HEAD/jars"
+	export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
+	export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.4.1/jars"
+	export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
+	export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
+	export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
+	export AWS_CLOUDWATCH_HOME="/usr/local/Cellar/cloud-watch/1.0.12.1/jars"
+  export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
+fi
 
 export HISTCONTROL=ignoredups:ignorespace
 export HISTSIZE=10000
@@ -23,9 +25,23 @@ fi
 
 export CLICOLOR=1
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+# Set git autocompletion and PS1 integration
+
+if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
+	. /usr/local/git/contrib/completion/git-completion.bash
 fi
+
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+	. /usr/local/etc/bash_completion.d/git-completion.bash
+fi
+
+__git_ps1 ()
+{
+  local b="$(git symbolic-ref HEAD 2>/dev/null)";
+  if [ -n "$b" ]; then
+    printf " (%s)" "${b##refs/heads/}";
+  fi
+}
 
 # set 2-line color prompt (with git branch if possible)
 if type __git_ps1 >/dev/null 2>&1; then
