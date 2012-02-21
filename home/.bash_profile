@@ -17,7 +17,9 @@ if [ -f $HOME/.vpm_keys ]; then
   source "$HOME/.vpm_keys"
 fi
 
-export HISTCONTROL=ignoredups:ignorespace
+export HISTCONTROL=ignorespace
+export HISTCONTROL=ignoredups
+export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
 
