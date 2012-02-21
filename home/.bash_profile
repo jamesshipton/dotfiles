@@ -13,6 +13,10 @@ if [ -f $HOME/.aws-credentials-master ]; then
   export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
 fi
 
+if [ -f $HOME/.vpm_keys ]; then
+  source "$HOME/.vpm_keys"
+fi
+
 export HISTCONTROL=ignoredups:ignorespace
 export HISTSIZE=10000
 shopt -s histappend
