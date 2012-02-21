@@ -57,3 +57,9 @@ else
 fi
 
 alias la='ls -lahg'
+
+alias rails='bundle exec rails'
+alias rake='bundle exec rake'
+alias rspec='bundle exec rspec'
+alias cucumber='bundle exec cucumber'
+
