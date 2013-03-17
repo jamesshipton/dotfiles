@@ -31,17 +31,11 @@ fi
 
 export CLICOLOR=1
 
-source .bash_alias
+source ~/.bash_alias
 
 # Set git autocompletion and PS1 integration
 
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-	. /usr/local/git/contrib/completion/git-completion.bash
-fi
-
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-	. /usr/local/etc/bash_completion.d/git-completion.bash
-fi
+source ~/.git-completion.bash
 
 __git_ps1 ()
 {
