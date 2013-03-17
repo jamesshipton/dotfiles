@@ -3,9 +3,49 @@
   email = ionysis@gmail.com
 
 [alias]
-  co  = checkout
-  ri  = rebase --interactive --autosquash
-  rc  = rebase --continue
+  a    = add
+  aa   = add -A
+  ap   = add --patch
+
+  b    = branch
+  ba   = branch -a
+  bd   = branch -d
+  bdd  = branch -D
+
+  co   = checkout
+  cob  = checkout -b
+
+  cam  = commit -am
+  cm   = commit -m
+  cv   = commit -v
+  cach = commit --amend -C HEAD
+
+  cp   = cherry-pick
+
+  d    = diff
+  ds   = diff --staged
+
+  l    = log --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%an%Creset' master..
+  la   = log --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%an%Creset' --graph
+
+  m    = merge
+  mom  = merge origin/master
+
+  pom  = push origin master
+  pomp = push origin master:production
+
+  r    = rebase
+  ra   = rebase --abort
+  rc   = rebase --continue
+  ri   = rebase --interactive --autosquash
+
+  rt   = reset
+  rth  = reset --hard
+  rts  = reset --soft
+
+  s   = status
+
+  sh  = show
 
 [core]
   excludesfile = ~/.gitignore
@@ -16,4 +56,7 @@
 
 [init]
   templatedir = ~/.git_template
+
+[color]
+  ui = true
 
