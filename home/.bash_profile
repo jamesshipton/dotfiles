@@ -31,6 +31,8 @@ fi
 
 export CLICOLOR=1
 
+source .bash_alias
+
 # Set git autocompletion and PS1 integration
 
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
@@ -55,11 +57,4 @@ if type __git_ps1 >/dev/null 2>&1; then
 else
   PS1='\n\[\033[01;35m\]\t \[\033[00m\]\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\[\033[01;32m\]\u\[\033[00m\]:-> '
 fi
-
-alias la='ls -lahg'
-
-alias rails='bundle exec rails'
-alias rake='bundle exec rake'
-alias rspec='bundle exec rspec'
-alias cucumber='bundle exec cucumber'
 
