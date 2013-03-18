@@ -25,8 +25,8 @@
   d    = diff
   ds   = diff --staged
 
-  l    = log --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%an%Creset' master..
-  la   = log --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%an%Creset' --graph
+  l    = log --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset' master..
+  la   = log --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset' --graph
 
   m    = merge
   mom  = merge origin/master
