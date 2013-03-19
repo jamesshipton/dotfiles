@@ -25,6 +25,8 @@
   d    = diff
   ds   = diff --staged
 
+  fx  = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
+
   l    = log --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset' master..
   la   = log --pretty=format:'%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset' --graph
 
