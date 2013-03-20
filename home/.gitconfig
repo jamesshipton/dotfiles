@@ -28,7 +28,7 @@
   fx  = !sh -c 'git commit -m \"fixup! $(git log HEAD~$(($0-1)) -1 --format='\\''%s'\\'' $@)\"'
 
   l    = !sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset\" master.. | cat -n'
-  la   = !sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset\" --graph -n 40 | cat'
+  la   = !sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset\" --graph -n 40 | cat -n'
 
   m    = merge
   mom  = merge origin/master
