@@ -46,8 +46,7 @@
   rts  = reset --soft
 
   s   = status
-
-  sh  = show
+  sh  = !sh -c 'git show HEAD~$(($0-1))'
 
 [core]
   excludesfile = ~/.gitignore
