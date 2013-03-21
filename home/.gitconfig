@@ -25,7 +25,7 @@
   d    = diff
   ds   = diff --staged
 
-  fx  = !sh -c 'git commit -m \"fixup! $(git log HEAD~$(($0-1)) -1 --format='\\''%s'\\'' $@)\"'
+  fx  = "!sh -c 'git commit -m \"fixup! $(if [[ $0 =~ ^[0-9]+$ ]]; then LINE=$(($0-1)); else LINE=0; fi; git log HEAD~$((LINE)) -1 --format='\\''%s'\\'' $@)\"'"
 
   l    = !sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset\" master.. | cat -n'
   la   = !sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr)%Creset %C(yellow)%ae%Creset\" --graph -n 45 | cat -n'
@@ -46,7 +46,7 @@
   rts  = reset --soft
 
   s   = status
-  sh  = !sh -c 'git show HEAD~$(($0-1))'
+  sh  = "!sh -c 'if [[ $0 =~ ^[0-9]+$ ]]; then LINE=$(($0-1)); else LINE=0; fi; git show HEAD~$(($LINE))'"
 
 [core]
   excludesfile = ~/.gitignore
