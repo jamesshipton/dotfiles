@@ -45,6 +45,10 @@ __git_ps1 ()
   fi
 }
 
+function psgrep() {
+  ps aux | grep -v grep | grep "$@" -i --color=auto;
+}
+
 # set 2-line color prompt (with git branch if possible)
 if type __git_ps1 >/dev/null 2>&1; then
   PS1='\n\[\033[01;35m\]\t \[\033[00m\]\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[01;33m\]$(__git_ps1 " (%s)")\[\033[00m\]\n\[\033[01;32m\]\u\[\033[00m\]:-> '
