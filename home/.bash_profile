@@ -17,6 +17,10 @@ if [ -f $HOME/.vpm_keys ]; then
   source "$HOME/.vpm_keys"
 fi
 
+if [ -f $HOME/.campfire-token ]; then
+  source "$HOME/.campfire-token"
+fi
+
 export HISTCONTROL=ignorespace
 export HISTCONTROL=ignoredups
 export HISTCONTROL=erasedups
