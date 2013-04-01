@@ -33,6 +33,8 @@
   m    = merge
   mom  = merge origin/master
 
+  poc  = !sh -c 'git push origin $(git rev-parse --abbrev-ref HEAD)'
+  pocf = !sh -c 'git push origin -f $(git rev-parse --abbrev-ref HEAD)'
   pom  = push origin master
   pomp = push origin master:production
 
