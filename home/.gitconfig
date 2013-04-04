@@ -42,6 +42,8 @@
   ra   = rebase --abort
   rc   = rebase --continue
   ri   = rebase --interactive --autosquash
+  rim  = rebase --interactive --autosquash master
+  ril  = "!sh -c 'if [[ $0 =~ ^[0-9]+$ ]]; then LINE=HEAD~$(($(($0-1)))); else LINE=$0; fi; git rebase --interactive --autosquash $LINE'"
 
   rt   = reset
   rth  = reset --hard
