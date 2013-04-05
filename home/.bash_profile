@@ -21,6 +21,10 @@ if [ -f $HOME/.campfire-token ]; then
   source "$HOME/.campfire-token"
 fi
 
+if [ -f $HOME/.tapas_auth ]; then
+  source "$HOME/.tapas_auth"
+fi
+
 export HISTCONTROL=ignorespace
 export HISTCONTROL=ignoredups
 export HISTCONTROL=erasedups
