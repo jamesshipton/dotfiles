@@ -1,4 +1,10 @@
-[[ -s "/Users/jamesshipton/.rvm/scripts/rvm" ]] && source "/Users/jamesshipton/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# Setup rbenv
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
+fi
+
+# Put bundle on the path
+PATH="./.bundle/bin:$PATH"
 
 if [ -f $HOME/.aws-credentials-master ]; then
 	export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
