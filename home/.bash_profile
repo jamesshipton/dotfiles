@@ -31,6 +31,10 @@ if [ -f $HOME/.tapas_auth ]; then
   source "$HOME/.tapas_auth"
 fi
 
+if [ -f $HOME/.redux_auth ]; then
+  source "$HOME/.redux_auth"
+fi
+
 export HISTCONTROL=ignorespace
 export HISTCONTROL=ignoredups
 export HISTCONTROL=erasedups
