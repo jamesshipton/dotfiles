@@ -18,6 +18,7 @@
   cam  = commit -am
   cm   = commit -m
   cv   = commit -v
+  ca   = commit --amend
   cach = commit --amend -C HEAD
 
   cp   = cherry-pick
