@@ -19,20 +19,12 @@ if [ -f $HOME/.aws-credentials-master ]; then
   export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
 fi
 
-if [ -f $HOME/.vpm_keys ]; then
-  source "$HOME/.vpm_keys"
-fi
-
 if [ -f $HOME/.campfire-token ]; then
   source "$HOME/.campfire-token"
 fi
 
 if [ -f $HOME/.tapas_auth ]; then
   source "$HOME/.tapas_auth"
-fi
-
-if [ -f $HOME/.redux_auth ]; then
-  source "$HOME/.redux_auth"
 fi
 
 export HISTCONTROL=ignorespace
