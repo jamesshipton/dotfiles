@@ -8,6 +8,8 @@
   ap   = add --patch
 
   b    = branch
+  bm   = branch --merged master
+  bn   = branch --no-merged master
   ba   = branch -a
   bd   = branch -d
   bdd  = branch -D
