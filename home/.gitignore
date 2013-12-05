@@ -2,3 +2,5 @@ zeus.json
 custom_plan.rb
 .DS_Store
 .bundle/
+.netrwhist
+*.swp

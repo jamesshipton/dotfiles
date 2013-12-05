@@ -1,6 +1,16 @@
 " Example Vim configuration.
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 
+" Pathogen
+execute pathogen#infect()
+
+augroup reload_vimrc " {
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  augroup END " }
+
+autocmd BufWritePre * :%s/\s\+$//e
+
 set nocompatible                  " Must come first because it changes other options.
 
 syntax enable                     " Turn on syntax highlighting.
@@ -47,8 +57,14 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-" Or use vividchalk
-colorscheme topfunky-light
+" Fugitive
+autocmd QuickFixCmdPost *grep* cwindow
+
+" Colors
+set t_Co=256
+colorscheme default
+
+let mapleader = ";"
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -61,8 +77,9 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-" Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
+" CtrlP
+map <Leader>g :CtrlP<cr>
+map <Leader>f :CtrlPBuffer<cr>
 
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
