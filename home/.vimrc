@@ -82,13 +82,9 @@ map <leader>tm :tabmove
 map <Leader>g :CtrlP<cr>
 map <Leader>f :CtrlPBuffer<cr>
 
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
+" NERDTree
+map <Leader>no :NERDTreeToggle<cr>
+map <Leader>nc :NERDTreeClose<cr>
 
-"vnoremap ; :
-"vnoremap : ;
-
-" Automatic fold settings for specific files. Uncomment to use.
-" autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+" Search Highlighting
+map <Leader>h :noh<cr>
