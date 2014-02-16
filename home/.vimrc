@@ -67,6 +67,11 @@ let mapleader = ";"
 
 map <leader>i mmgg=G`m<cr> " Indenting the whole file
 
+" Window mappings
+map <leader>wo <C-w>v
+map <leader>wq <C-w>q
+map <leader>w <C-w>w
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
@@ -79,12 +84,12 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
 " CtrlP
-map <Leader>g :CtrlP<cr>
-map <Leader>f :CtrlPBuffer<cr>
+map <leader>g :CtrlP<cr>
+map <leader>f :CtrlPBuffer<cr>
 
 " NERDTree
-map <Leader>no :NERDTreeToggle<cr>
-map <Leader>nc :NERDTreeClose<cr>
+map <leader>no :NERDTreeToggle<cr>
+map <leader>nc :NERDTreeClose<cr>
 
 " Search Highlighting
-map <Leader>h :noh<cr>
+map <leader>h :noh<cr>
