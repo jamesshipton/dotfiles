@@ -67,6 +67,8 @@ let mapleader = ";"
 
 map <leader>i mmgg=G`m<cr> " Indenting the whole file
 
+imap ;; <Esc>
+
 " Window mappings
 map <leader>wo <C-w>v
 map <leader>wq <C-w>q
