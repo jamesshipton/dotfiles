@@ -39,6 +39,8 @@ if ! ps aux |grep '[d]ude' >/dev/null ; then
   git dude ~/.git-dude >/dev/null 2>&1 &
 fi
 
+export RAILS_SPRING=true
+
 export CLICOLOR=1
 
 source ~/.bash_alias
