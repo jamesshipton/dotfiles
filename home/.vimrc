@@ -1,6 +1,3 @@
-" Example Vim configuration.
-" Copy or symlink to ~/.vimrc or ~/_vimrc.
-
 " Pathogen
 execute pathogen#infect()
 
@@ -67,7 +64,12 @@ let mapleader = ";"
 
 map <leader>i mmgg=G`m<cr> " Indenting the whole file
 
-imap ;; <Esc>
+" Quick saving
+imap ;; <Esc>:w<cr>
+nmap ;; :w<cr>
+
+" Add debugger line
+nmap <leader>d odebugger;;
 
 " Window mappings
 map <leader>wo <C-w>v
