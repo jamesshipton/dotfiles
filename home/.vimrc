@@ -97,3 +97,12 @@ map <leader>nc :NERDTreeClose<cr>
 
 " Search Highlighting
 map <leader>h :noh<cr>
+
+" Tslime
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+
+" vim-rspec mappings
+map <leader>t :call RunCurrentSpecFile()<cr>
+map <leader>s :call RunNearestSpec()<cr>
+map <leader>l :call RunLastSpec()<cr>
+map <leader>a :call RunAllSpecs()<cr>
