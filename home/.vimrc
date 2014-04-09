@@ -99,7 +99,7 @@ map <leader>nc :NERDTreeClose<cr>
 map <leader>h :noh<cr>
 
 " Tslime
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec} -d\n")'
 
 " vim-rspec mappings
 map <leader>t :call RunCurrentSpecFile()<cr>
