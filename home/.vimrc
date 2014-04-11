@@ -71,6 +71,9 @@ nmap ;; :w<cr>
 " Add debugger line
 nmap <leader>d odebugger;;
 
+" Add save_and_open_page line
+nmap <leader>sa osave_and_open_page;;
+
 " Window mappings
 map <leader>wo <C-w>v
 map <leader>wq <C-w>q
@@ -99,7 +102,7 @@ map <leader>nc :NERDTreeClose<cr>
 map <leader>h :noh<cr>
 
 " Tslime
-let g:rspec_command = 'call Send_to_Tmux("spring rspec {spec} -d\n")'
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 " vim-rspec mappings
 map <leader>t :call RunCurrentSpecFile()<cr>
