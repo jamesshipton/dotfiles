@@ -55,8 +55,12 @@ __git_ps1 ()
   fi
 }
 
-function psgrep() {
+function psg() {
   ps aux | grep -v grep | grep "$@" -i --color=auto;
+}
+
+function hsg() {
+  history | grep -v grep | grep "$@" -i --color=auto;
 }
 
 # set 2-line color prompt (with git branch if possible)
