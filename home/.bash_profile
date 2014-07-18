@@ -3,25 +3,11 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 fi
 
+### added by the heroku toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 # Put bundle on the path
-PATH="./.bundle/bin:$PATH"
-
-if [ -f $HOME/.aws-credentials-master ]; then
-	export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
-	export AWS_ELB_HOME="/usr/local/Cellar/elb-tools/1.0.15.1/jars"
-	export AWS_IAM_HOME="/usr/local/Cellar/aws-iam-tools/HEAD/jars"
-	export AWS_RDS_HOME="/usr/local/Cellar/rds-command-line-tools/1.3.003/jars"
-	export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.4.4.1/jars"
-	export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
-	export EC2_PRIVATE_KEY="$(/bin/ls $HOME/.ec2/pk-*.pem)"
-	export EC2_CERT="$(/bin/ls $HOME/.ec2/cert-*.pem)"
-	export AWS_CLOUDWATCH_HOME="/usr/local/Cellar/cloud-watch/1.0.12.1/jars"
-  export SERVICE_HOME="$AWS_CLOUDWATCH_HOME"
-fi
-
-if [ -f $HOME/.campfire-token ]; then
-  source "$HOME/.campfire-token"
-fi
+export PATH="./.bundle/bin:$PATH"
 
 if [ -f $HOME/.tapas_auth ]; then
   source "$HOME/.tapas_auth"
@@ -34,10 +20,6 @@ export HISTSIZE=10000
 shopt -s histappend
 
 export EDITOR=mate
-
-if ! ps aux |grep '[d]ude' >/dev/null ; then
-  git dude ~/.git-dude >/dev/null 2>&1 &
-fi
 
 export CLICOLOR=1
 
