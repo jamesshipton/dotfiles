@@ -69,7 +69,7 @@ imap ;; <Esc>:w<cr>
 nmap ;; :w<cr>
 
 " Add debugger line
-nmap <leader>d odebugger;;
+nmap <leader>d obyebug;;
 
 " Add save_and_open_page line
 nmap <leader>sa osave_and_open_page;;
