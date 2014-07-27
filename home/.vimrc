@@ -74,6 +74,12 @@ nmap <leader>d obyebug;;
 " Add save_and_open_page line
 nmap <leader>sa osave_and_open_page;;
 
+" Comment out visual mode selection
+vmap <leader>cc :s/^/# /<cr><leader>h
+
+" Uncomment out visual mode selection
+vmap <leader>cu :s/# //<cr>
+
 " Window mappings
 map <leader>wo <C-w>v
 map <leader>wq <C-w>q
