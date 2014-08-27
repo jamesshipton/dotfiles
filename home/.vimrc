@@ -102,6 +102,7 @@ map <leader>tm :tabmove
 " CtrlP
 map <leader>g :CtrlP<cr>
 map <leader>f :CtrlPBuffer<cr>
+let g:ctrlp_show_hidden = 1
 
 " NERDTree
 map <leader>no :NERDTreeToggle<cr>
