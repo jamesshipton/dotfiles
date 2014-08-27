@@ -13,6 +13,9 @@ set nocompatible                  " Must come first because it changes other opt
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+" Extra Ruby syntax highlighting
+au BufNewFile,BufRead {Capfile} set ft=ruby
+
 runtime macros/matchit.vim        " Load the matchit plugin.
 
 set showcmd                       " Display incomplete commands.
