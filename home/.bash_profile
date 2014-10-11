@@ -6,6 +6,9 @@ fi
 ### added by the heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Points to the ios compiled app for calybash testing
+export APP_BUNDLE_PATH=~/workarea/neo-ios/tmp/build/Neo-Calabash.app
+
 # Put bundle on the path
 export PATH="./.bundle/bin:$PATH"
 
