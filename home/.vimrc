@@ -10,7 +10,7 @@ Plugin 'git@github.com:scrooloose/nerdtree.git'
 Plugin 'git@github.com:kien/ctrlp.vim.git'
 Plugin 'git@github.com:vim-ruby/vim-ruby.git'
 Plugin 'git@github.com:jgdavey/tslime.vim.git'
-Plugin 'git@github.com:thoughtbot/vim-rspec.git'
+Plugin 'git@github.com:jamesshipton/vim-rspec.git'
 Plugin 'git@github.com:kana/vim-textobj-user.git'
 Plugin 'git@github.com:nelstrom/vim-textobj-rubyblock.git'
 
@@ -112,7 +112,7 @@ map <leader>nc :NERDTreeClose<cr>
 map <leader>h :noh<cr>
 
 " Tslime
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("{spec}\n")'
 
 " vim-rspec mappings
 map <leader>t :call RunCurrentSpecFile()<cr>
