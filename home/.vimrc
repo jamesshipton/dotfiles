@@ -1,14 +1,20 @@
-" Pathogen
-execute pathogen#infect()
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-augroup reload_vimrc " {
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-  augroup END " }
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-autocmd BufWritePre * :%s/\s\+$//e
+Plugin 'git@github.com:gmarik/Vundle.vim.git'
+Plugin 'git@github.com:scrooloose/nerdtree.git'
+Plugin 'git@github.com:kien/ctrlp.vim.git'
+Plugin 'git@github.com:vim-ruby/vim-ruby.git'
+Plugin 'git@github.com:jgdavey/tslime.vim.git'
+Plugin 'git@github.com:thoughtbot/vim-rspec.git'
+Plugin 'git@github.com:kana/vim-textobj-user.git'
+Plugin 'git@github.com:nelstrom/vim-textobj-rubyblock.git'
 
-set nocompatible                  " Must come first because it changes other options.
+call vundle#end()            " required
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -56,9 +62,6 @@ set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
-" Fugitive
-autocmd QuickFixCmdPost *grep* cwindow
-
 " Colors
 set t_Co=256
 colorscheme default
@@ -70,9 +73,6 @@ map <leader>i mmgg=G`m<cr> " Indenting the whole file
 " Quick saving
 imap ;; <Esc>:w<cr>
 nmap ;; :w<cr>
-
-" Add debugger line
-nmap <leader>d obyebug;;
 
 " Add save_and_open_page line
 nmap <leader>sa osave_and_open_page;;
