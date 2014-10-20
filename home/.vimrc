@@ -19,6 +19,9 @@ call vundle#end()            " required
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+" Remove trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Extra Ruby syntax highlighting
 au BufNewFile,BufRead {Capfile} set ft=ruby
 
