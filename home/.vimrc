@@ -7,6 +7,8 @@ call vundle#begin()
 
 Plugin 'git@github.com:gmarik/Vundle.vim.git'
 Plugin 'git@github.com:scrooloose/nerdtree.git'
+Plugin 'git@github.com:tpope/vim-fugitive.git'
+Plugin 'git@github.com:tpope/vim-bundler.git'
 Plugin 'git@github.com:kien/ctrlp.vim.git'
 Plugin 'git@github.com:vim-ruby/vim-ruby.git'
 Plugin 'git@github.com:jgdavey/tslime.vim.git'
