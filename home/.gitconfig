@@ -61,6 +61,8 @@
   s   = status
   sh  = "!sh -c 'if [[ $0 =~ ^[0-9]+$ ]]; then LINE=$(($0-1)); else LINE=0; fi; git show HEAD~$(($LINE))'"
 
+  ctags = !.git/hooks/ctags
+
 [core]
   excludesfile = ~/.gitignore
   editor = vim
