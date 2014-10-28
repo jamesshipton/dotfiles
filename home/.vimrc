@@ -110,8 +110,8 @@ map <leader>f :CtrlPBuffer<cr>
 let g:ctrlp_show_hidden = 1
 
 " CTags mappings
-map <leader>ff <c-]>
-map <leader>fd <c-t>
+map <leader>dd <c-]>
+map <leader>ds <c-t>
 
 " NERDTree
 map <leader>no :NERDTreeToggle<cr>
