@@ -128,3 +128,5 @@ map <leader>t :call RunCurrentSpecFile()<cr>
 map <leader>s :call RunNearestSpec()<cr>
 map <leader>l :call RunLastSpec()<cr>
 map <leader>a :call RunAllSpecs()<cr>
+map <leader>r :call RunAllRSpecs()<cr>
+map <leader>c :call RunAllCucumbers()<cr>
