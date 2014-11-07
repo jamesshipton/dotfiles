@@ -41,6 +41,7 @@
 
   m    = merge
   mom  = merge origin/master
+  moc  = "!sh -c 'git merge origin/$(git rev-parse --abbrev-ref HEAD)'"
 
   poc  = "!sh -c 'git push origin $(git rev-parse --abbrev-ref HEAD)'"
   pocf = "!sh -c 'git push origin -f $(git rev-parse --abbrev-ref HEAD)'"
