@@ -3,6 +3,9 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 fi
 
+# add vi mappings to bash
+set -o vi
+
 ### added by the heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
