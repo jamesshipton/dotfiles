@@ -75,8 +75,11 @@
 [init]
   templatedir = ~/.git_template
 
+[merge]
+  conflictstyle = diff3
+
 [color]
   ui = true
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
