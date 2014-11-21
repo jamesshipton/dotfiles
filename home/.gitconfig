@@ -29,7 +29,8 @@
   d    = diff
   ds   = diff --staged
 
-  f    = fetch --all --prune
+  f    = fetch --prune
+  fa   = fetch --all --prune
 
   fx   = "!sh -c 'git commit -m \"fixup! $(if [[ $0 =~ ^[0-9]+$ ]]; then LINE=$(($0-1)); else LINE=0; fi; git log HEAD~$((LINE)) -1 --format='\\''%s'\\'' $@)\"'"
 
