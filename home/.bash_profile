@@ -19,10 +19,8 @@ if [ -f $HOME/.tapas_auth ]; then
   source "$HOME/.tapas_auth"
 fi
 
-export HISTCONTROL=ignorespace
-export HISTCONTROL=ignoredups
-export HISTCONTROL=erasedups
 export HISTSIZE=10000
+export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
 export EDITOR=mate
