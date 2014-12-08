@@ -130,3 +130,7 @@ map <leader>l :call RunLastSpec()<cr>
 map <leader>a :call RunAllSpecs()<cr>
 map <leader>r :call RunAllRSpecs()<cr>
 map <leader>c :call RunAllCucumbers()<cr>
+
+" stop annoying swp files
+set nobackup
+set nowritebackup
