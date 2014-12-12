@@ -120,6 +120,9 @@ map <leader>nc :NERDTreeClose<cr>
 " Search Highlighting
 map <leader>h :noh<cr>
 
+" Close all buffers in the current tab
+map <leader>bb :%bdelete<cr>
+
 " Tslime
 let g:rspec_command = 'call Send_to_Tmux("{spec}\n")'
 
