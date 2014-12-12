@@ -83,7 +83,7 @@ nmap ;; :w<cr>
 nmap <leader>sa osave_and_open_page;;
 
 " Comment out visual mode selection
-vmap <leader>cc :s/^/# /<cr><leader>h
+vmap <leader>cc :s/^/# /<cr>:noh<cr>
 
 " Uncomment out visual mode selection
 vmap <leader>cu :s/# //<cr>
