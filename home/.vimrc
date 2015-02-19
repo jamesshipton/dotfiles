@@ -58,6 +58,7 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
+set noswapfile                    " Do not create *.swp files
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set tabstop=2                    " Global tab width.
@@ -134,7 +135,3 @@ map <leader>l :call RunLastSpec()<cr>
 map <leader>a :call RunAllSpecs()<cr>
 map <leader>r :call RunAllRSpecs()<cr>
 map <leader>c :call RunAllCucumbers()<cr>
-
-" stop annoying swp files
-set nobackup
-set nowritebackup
