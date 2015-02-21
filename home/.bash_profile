@@ -15,6 +15,11 @@ export APP_BUNDLE_PATH=~/workarea/neo-ios/tmp/build/Neo-Calabash.app
 # Put bundle on the path
 export PATH="./.bundle/bin:$PATH"
 
+# Add go to the path
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+
 if [ -f $HOME/.tapas_auth ]; then
   source "$HOME/.tapas_auth"
 fi
