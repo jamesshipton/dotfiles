@@ -16,6 +16,7 @@ Plugin 'git@github.com:jgdavey/tslime.vim.git'
 Plugin 'git@github.com:jamesshipton/vim-rspec.git'
 Plugin 'git@github.com:kana/vim-textobj-user.git'
 Plugin 'git@github.com:nelstrom/vim-textobj-rubyblock.git'
+Plugin 'git@github.com:fatih/vim-go.git'
 
 call vundle#end()            " required
 
