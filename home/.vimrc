@@ -136,3 +136,9 @@ map <leader>l :call RunLastSpec()<cr>
 map <leader>a :call RunAllSpecs()<cr>
 map <leader>r :call RunAllRSpecs()<cr>
 map <leader>c :call RunAllCucumbers()<cr>
+
+" go mappings
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
