@@ -82,13 +82,16 @@ map <leader>i mmgg=G`m<cr> " Indenting the whole file
 imap ;; <Esc>:w<cr>
 nmap ;; :w<cr>
 
+" Copy visual mode selection to the clipboard
+vmap <leader>cy "*y
+
 " Add save_and_open_page line
 nmap <leader>sa osave_and_open_page;;
 
-" Comment out visual mode selection
+" Comment visual mode selection
 vmap <leader>cc :s/^/# /<cr>:noh<cr>
 
-" Uncomment out visual mode selection
+" Uncomment visual mode selection
 vmap <leader>cu :s/# //<cr>
 
 " Window mappings
