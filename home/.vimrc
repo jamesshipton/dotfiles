@@ -1,22 +1,21 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible              " be iMproved, required filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'git@github.com:gmarik/Vundle.vim.git'
-Plugin 'git@github.com:scrooloose/nerdtree.git'
-Plugin 'git@github.com:tpope/vim-fugitive.git'
-Plugin 'git@github.com:tpope/vim-bundler.git'
-Plugin 'git@github.com:tpope/vim-cucumber.git'
-Plugin 'git@github.com:kien/ctrlp.vim.git'
-Plugin 'git@github.com:vim-ruby/vim-ruby.git'
-Plugin 'git@github.com:jgdavey/tslime.vim.git'
-Plugin 'git@github.com:jamesshipton/vim-rspec.git'
-Plugin 'git@github.com:kana/vim-textobj-user.git'
-Plugin 'git@github.com:nelstrom/vim-textobj-rubyblock.git'
-Plugin 'git@github.com:fatih/vim-go.git'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-cucumber'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'jamesshipton/vim-rspec'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 
