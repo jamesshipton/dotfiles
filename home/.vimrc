@@ -22,6 +22,9 @@ call vundle#end()            " required
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+" Auto-reload buffers when files are changed on disk
+set autoread
+
 " Remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
