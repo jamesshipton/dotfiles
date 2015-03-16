@@ -13,7 +13,6 @@
   ba   = branch -a
   bd   = branch -d
   bdd  = branch -D
-  bda  = "!sh -c 'git branch -d $0; git push origin :$0'"
 
   co   = checkout
   cob  = checkout -b
