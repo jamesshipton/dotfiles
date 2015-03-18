@@ -27,6 +27,7 @@
 
   d    = diff
   ds   = diff --staged
+  dst  = diff --stat
 
   f    = fetch --multiple origin james --prune
   fa   = fetch --all --prune
