@@ -85,7 +85,7 @@ imap ;; <Esc>:w<cr>
 nmap ;; :w<cr>
 
 " Copy visual mode selection to the clipboard
-vmap <leader>cy "*y
+vmap <leader>y "*y
 
 " Add save_and_open_page line
 nmap <leader>sa osave_and_open_page;;
