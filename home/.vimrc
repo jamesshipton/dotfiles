@@ -91,6 +91,9 @@ vmap <leader>y "*y
 " Add save_and_open_page line
 nmap <leader>sa osave_and_open_page;;
 
+" Switch between alternate files
+nmap <leader>o :A<cr>
+
 " Comment visual mode selection
 vmap <leader>cc :s/^/# /<cr>:noh<cr>
 
