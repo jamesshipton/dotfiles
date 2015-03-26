@@ -4,12 +4,12 @@ set nocompatible              " be iMproved, required filetype off              
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-rails'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'jgdavey/tslime.vim'
