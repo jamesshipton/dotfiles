@@ -63,3 +63,4 @@ function hsg() {
 # set 2-line color prompt (with git branch if possible)
 PS1='\n\[\e[1;35m\]\t\[\e[m\] \[\e[1;32m\]\h\[\e[m\]:\[\e[00m\]\[\e[1;34m\]\w\[\e[m\] \[\e[0;35m\]$(__rbenv_ps1)\[\e[m\] \[\e[00m\]\[\e[01;33m\]$(__git_ps1 " (%s)")\[\e[m\]\n\[\e[1;32m\]\u:->\[\e[m\] '
 
+export PATH="/usr/local/sbin:$PATH"
