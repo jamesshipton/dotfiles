@@ -116,6 +116,10 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" Page Scroll
+map <leader>nn <c-F>
+map <leader>p <c-B>
+
 " CtrlP
 map <leader>g :CtrlP<cr>
 map <leader>f :CtrlPBuffer<cr>
