@@ -28,7 +28,7 @@ export HISTSIZE=10000
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
-export EDITOR=mate
+export EDITOR='subl'
 
 export CLICOLOR=1
 
