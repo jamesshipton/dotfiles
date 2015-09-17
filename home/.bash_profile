@@ -28,7 +28,7 @@ export HISTSIZE=10000
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
-export EDITOR='subl'
+export EDITOR='vim'
 
 export CLICOLOR=1
 
