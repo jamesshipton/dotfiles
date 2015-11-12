@@ -30,8 +30,8 @@
   ds   = diff --staged
   dst  = diff --stat
 
-  f    = fetch --multiple origin james --prune
-  fh   = fetch --multiple heroku-feature heroku-feature-rewards heroku-dev heroku-test heroku-staging heroku-production --prune
+  f    = fetch --multiple origin --prune
+  fh   = fetch --multiple heroku --prune
   fa   = fetch --all --prune
 
   fx   = "!sh -c 'git commit -m \"fixup! $(if [[ $0 =~ ^[0-9]+$ ]]; then LINE=$(($0-1)); else LINE=0; fi; git log HEAD~$((LINE)) -1 --format='\\''%s'\\'' $@)\"'"
@@ -46,22 +46,14 @@
   mom  = merge origin/master
   moc  = "!sh -c 'git merge origin/$(git rev-parse --abbrev-ref HEAD)'"
 
-  mjm  = merge james/master
-  mjc  = "!sh -c 'git merge james/$(git rev-parse --abbrev-ref HEAD)'"
-
   poc  = "!sh -c 'git push origin $(git rev-parse --abbrev-ref HEAD)'"
   pocf = "!sh -c 'git push origin -f $(git rev-parse --abbrev-ref HEAD)'"
   pom  = push origin master
-
-  pjc  = "!sh -c 'git push james $(git rev-parse --abbrev-ref HEAD)'"
-  pjcf = "!sh -c 'git push james -f $(git rev-parse --abbrev-ref HEAD)'"
-  pjm  = push james master
 
   r    = rebase
   ra   = rebase --abort
   rc   = rebase --continue
   ri   = rebase --interactive --autosquash
-  rid  = rebase --interactive --autosquash develop
   rim  = rebase --interactive --autosquash master
   ril  = "!sh -c 'if [[ $0 =~ ^[0-9]+$ ]]; then LINE=HEAD~$(($(($0-1)))); else LINE=$0; fi; git rebase --interactive --autosquash $LINE'"
 
