@@ -95,6 +95,9 @@ nmap <leader>sa osave_and_open_page;;
 " Switch between alternate files
 nmap <leader>o :A<cr>
 
+" Find matching cucumber step
+nmap <leader>m [<C-d>
+
 let g:rails_projections = {
       \ "app/lib/*.rb": { "alternate": "spec/lib/{}_spec.rb" },
       \ "spec/lib/*_spec.rb": { "alternate": "app/lib/{}.rb" }}
