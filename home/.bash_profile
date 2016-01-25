@@ -3,6 +3,9 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 fi
 
+# add direnv
+eval "$(direnv hook bash)"
+
 # add vi mappings to bash
 set -o vi
 
