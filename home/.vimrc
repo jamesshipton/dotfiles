@@ -18,6 +18,7 @@ Plugin 'jamesshipton/vim-rspec'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'fatih/vim-go'
+Plugin 'strogonoff/vim-coffee-script'
 
 call vundle#end()            " required
 
