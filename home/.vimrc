@@ -19,6 +19,7 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'fatih/vim-go'
 Plugin 'strogonoff/vim-coffee-script'
+Plugin 'rizzatti/dash.vim'
 
 call vundle#end()            " required
 
@@ -87,6 +88,9 @@ map <leader>i mmgg=G`m<cr> " Indenting the whole file
 " Quick saving
 imap ;; <Esc>:w<cr>
 nmap ;; :w<cr>
+
+" Dash docs
+nmap <silent> <leader>d <Plug>DashSearch
 
 " Copy visual mode selection to the clipboard
 vmap <leader>y "*y
