@@ -35,6 +35,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Extra Ruby syntax highlighting
 au BufNewFile,BufRead {Capfile} set ft=ruby
 au BufNewFile,BufRead {*.arb} set ft=ruby
+au BufNewFile,BufRead {*.slim} set ft=ruby
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
