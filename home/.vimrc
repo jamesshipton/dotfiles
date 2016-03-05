@@ -36,6 +36,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 au BufNewFile,BufRead {Capfile} set ft=ruby
 au BufNewFile,BufRead {*.arb} set ft=ruby
 au BufNewFile,BufRead {*.slim} set ft=ruby
+au BufNewFile,BufRead {*.test} set ft=sh
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
