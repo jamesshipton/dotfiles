@@ -17,6 +17,7 @@
   co   = checkout
   cob  = checkout -b
   col  = checkout -
+  com  = checkout master
 
   cam  = commit -am
   cm   = commit -m
