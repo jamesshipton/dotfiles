@@ -71,6 +71,7 @@
 
 [core]
   excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
   editor = vim
 
 [github]

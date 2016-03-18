@@ -1,0 +1,2 @@
+spec/cassettes/** -diff
+doc/apipie_examples.json -diff
