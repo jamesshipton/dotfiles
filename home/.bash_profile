@@ -41,7 +41,6 @@ export CLICOLOR=1
 source ~/.bash_alias
 
 # Set git autocompletion and PS1 integration
-
 source ~/.git-completion.bash
 
 __git_ps1 ()
@@ -56,6 +55,10 @@ __rbenv_ps1 ()
 {
   rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
   printf $rbenv_ruby_version
+}
+
+function show() {
+  atom `bundle show $@`;
 }
 
 function psg() {
