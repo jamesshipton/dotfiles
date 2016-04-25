@@ -18,6 +18,9 @@ export APP_BUNDLE_PATH=~/workarea/neo-ios/tmp/build/Neo-Calabash.app
 # Put bundle on the path
 export PATH="./.bundle/bin:$PATH"
 
+# Add JAVA_HOME
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
 # Add go to the path
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
