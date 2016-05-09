@@ -66,7 +66,7 @@ function psg() {
 }
 
 function hsg() {
-  history | grep -v grep | grep "$@" -i --color=auto;
+  history | grep -v grep | grep "$@" -i --color=auto | ruby -e "ARGF.to_a.map { |match| match.sub(/^(\s)+[0-9]+(\s)+/, '') }.uniq.map { |line| puts line.gsub('$@', \"\e[01;33m$@\e[m\") }";
 }
 
 # set 2-line color prompt (with git branch if possible)
