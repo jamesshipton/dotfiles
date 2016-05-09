@@ -30,7 +30,7 @@ if [ -f $HOME/.tapas_auth ]; then
   source "$HOME/.tapas_auth"
 fi
 
-export HISTSIZE=10000
+export HISTSIZE=100000
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
