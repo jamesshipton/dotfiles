@@ -29,8 +29,9 @@ filetype plugin indent on         " Turn on file type detection.
 " Auto-reload buffers when files are changed on disk
 set autoread
 
-" Remove trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+" Remove trailing whitespace, apart from sql files
+" autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * if index(['sql'], &ft) < 0 | :%s/\s\+$//e
 
 " Extra Ruby syntax highlighting
 au BufNewFile,BufRead {Capfile} set ft=ruby
