@@ -27,6 +27,8 @@
 
   cp   = cherry-pick
 
+  ctags = !.git/hooks/ctags
+
   d    = diff
   ds   = diff --staged
   dst  = diff --stat
@@ -67,7 +69,7 @@
   s   = status
   sh  = "!sh -c 'if [[ $0 =~ ^[0-9]+$ ]]; then LINE=$(($0-1)); else LINE=0; fi; git show HEAD~$(($LINE))'"
 
-  ctags = !.git/hooks/ctags
+  start = "!git init && git commit --allow-empty -m 'Initial commit'"
 
 [core]
   excludesfile = ~/.gitignore
@@ -81,7 +83,6 @@
   templatedir = ~/.git_template
 
 [merge]
-  conflictstyle = diff3
 
 [color]
   ui = true
