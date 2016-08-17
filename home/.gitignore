@@ -1,6 +1,7 @@
 zeus.json
 custom_plan.rb
 .DS_Store
+_DS_Store
 .bundle/
 tags
 .netrwhist
