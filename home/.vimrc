@@ -117,6 +117,9 @@ vmap <leader>cc :s/^/# /<cr>:noh<cr>
 " Uncomment visual mode selection
 vmap <leader>cu :s/# //<cr>
 
+" Highlight lines from cursor
+map <leader>v <C-v>
+
 " Window mappings
 map <leader>wo <C-w>v
 map <leader>wq <C-w>q
