@@ -20,6 +20,7 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'fatih/vim-go'
 Plugin 'strogonoff/vim-coffee-script'
 Plugin 'rizzatti/dash.vim'
+Plugin 'tomtom/tcomment_vim'
 
 call vundle#end()            " required
 
@@ -107,15 +108,19 @@ nmap <leader>o :A<cr>
 " Find matching cucumber step
 nmap <leader>m [<C-d>
 
+" switch to relevant spec files in rails
 let g:rails_projections = {
       \ "app/lib/*.rb": { "alternate": "spec/lib/{}_spec.rb" },
       \ "spec/lib/*_spec.rb": { "alternate": "app/lib/{}.rb" }}
 
+" change mapping for the tcomment plugin - toggle comments
+vmap <leader>cc gc
+
 " Comment visual mode selection
-vmap <leader>cc :s/^/# /<cr>:noh<cr>
+" vmap <leader>cc :s/^/# /<cr>:noh<cr>
 
 " Uncomment visual mode selection
-vmap <leader>cu :s/# //<cr>
+" vmap <leader>cu :s/# //<cr>
 
 " Highlight lines from cursor
 map <leader>v <C-v>
