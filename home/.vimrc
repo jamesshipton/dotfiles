@@ -155,6 +155,7 @@ map <leader>p <c-B>
 map <leader>g :CtrlP<cr>
 map <leader>f :CtrlPBuffer<cr>
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_files = 0
 
 " CTags mappings
 map <leader>dd <c-]>
