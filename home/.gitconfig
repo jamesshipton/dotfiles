@@ -16,6 +16,7 @@
 
   co   = checkout
   cob  = checkout -b
+  cod  = checkout develop
   col  = checkout -
   com  = checkout master
 
