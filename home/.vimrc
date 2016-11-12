@@ -117,7 +117,8 @@ nmap <leader>m [<C-d>
 " switch to relevant spec files in rails
 let g:rails_projections = {
       \ "app/lib/*.rb": { "alternate": "spec/lib/{}_spec.rb" },
-      \ "spec/lib/*_spec.rb": { "alternate": "app/lib/{}.rb" }}
+      \ "spec/lib/*_spec.rb": { "alternate": "app/lib/{}.rb" },
+      \ }
 
 " change mapping for the tcomment plugin - toggle comments
 vmap <leader>cc gc
