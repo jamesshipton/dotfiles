@@ -157,6 +157,7 @@ map <leader>g :CtrlP<cr>
 map <leader>f :CtrlPBuffer<cr>
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 0
+let g:ctrlp_custom_ignore = '\v[\/]\.(bundle|git)$'
 
 " CTags mappings
 map <leader>dd <c-]>
