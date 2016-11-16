@@ -9,7 +9,9 @@
 
   b    = branch
   bm   = branch --merged master
+  bmd  = branch --merged develop
   bn   = branch --no-merged master
+  bnd  = branch --no-merged develop
   ba   = branch -a
   bd   = branch -d
   bdd  = branch -D
