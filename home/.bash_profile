@@ -65,6 +65,10 @@ function show() {
   atom `bundle show $@`;
 }
 
+function ksg() {
+  ps aux | grep -ie "$@" | awk '{print $2}' | xargs kill -9;
+}
+
 function psg() {
   ps aux | grep -v grep | grep "$@" -i --color=auto;
 }
