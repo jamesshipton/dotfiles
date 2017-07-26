@@ -66,6 +66,7 @@ set scrolloff=3                   " Show 3 lines of context around the cursor.
 
 set title                         " Set the terminal's title
 
+set t_vb=                         " No flashing screen
 set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
