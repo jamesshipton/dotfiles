@@ -15,18 +15,10 @@ export APP_BUNDLE_PATH=~/workarea/neo-ios/tmp/build/Neo-Calabash.app
 # Put bundle on the path
 export PATH="./.bundle/bin:$PATH"
 
-# Add go to the path
-export GOPATH=$HOME/go
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$PATH:/usr/local/opt/go/libexec/bin"
-
 export PATH="/usr/local/sbin:$PATH"
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/jamesshipton/anaconda3/bin:$PATH"
-if [ -f $HOME/.tapas_auth ]; then
-  source "$HOME/.tapas_auth"
-fi
 
 export HISTSIZE=100000
 export HISTCONTROL=ignoreboth:erasedups
