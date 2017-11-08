@@ -44,7 +44,7 @@
 
   g    = grep -n --break
 
-  l    = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" master.. | cat -n;echo'"
+  l    = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" master..'"
   lm    = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" master.. | cat -n;echo'"
   lc   = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" --graph'"
   la   = "!sh -c 'git log --pretty=format:\"%Cred%h%Creset -%C(auto)%d%Creset %s %C(white)(%cr)%Creset %C(yellow)%ae%Creset\" --graph --all'"
