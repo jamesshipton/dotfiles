@@ -20,7 +20,7 @@ export PATH="/usr/local/sbin:$PATH"
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/jamesshipton/anaconda3/bin:$PATH"
 
-export HISTSIZE=100000
+export HISTSIZE=500000
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
