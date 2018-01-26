@@ -48,7 +48,7 @@ __rbenv_ps1 ()
 }
 
 function show() {
-  atom `bundle show $@`;
+  mate `bundle show $@`;
 }
 
 function ksg() {
