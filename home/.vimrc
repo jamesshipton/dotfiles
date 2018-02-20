@@ -20,6 +20,7 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'strogonoff/vim-coffee-script'
 Plugin 'rizzatti/dash.vim'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'elixir-editors/vim-elixir'
 
 call vundle#end()            " required
 
