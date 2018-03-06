@@ -21,6 +21,7 @@ Plugin 'strogonoff/vim-coffee-script'
 Plugin 'rizzatti/dash.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 call vundle#end()            " required
 
@@ -114,6 +115,9 @@ nmap <leader>o :A<cr>
 
 " Find matching cucumber step
 nmap <leader>m [<C-d>
+
+" markdown preview
+let vim_markdown_preview_github=1
 
 " switch to relevant spec files in rails
 let g:rails_projections = {
