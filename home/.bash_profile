@@ -28,6 +28,9 @@ export EDITOR='vim'
 
 export CLICOLOR=1
 
+# elixir
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 source ~/.bash_alias
 
 # Set git autocompletion and PS1 integration
