@@ -21,6 +21,7 @@ Plugin 'strogonoff/vim-coffee-script'
 Plugin 'rizzatti/dash.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'ElmCast/elm-vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 
 call vundle#end()            " required
