@@ -24,6 +24,7 @@
 
   cam  = commit -am
   cm   = commit -m
+  cmw  = commit -m 'wip'
   cv   = commit -v
   ca   = commit --amend
   cach = commit --amend -C HEAD
