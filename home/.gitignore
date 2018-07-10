@@ -8,3 +8,4 @@ _DS_Store
 *.swo
 *.swn
 .byebug_history
+yarn-error.log
