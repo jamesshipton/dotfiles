@@ -64,6 +64,7 @@
   ri   = rebase --interactive --autosquash
   ril  = "!sh -c 'if [[ $0 =~ ^[0-9]+$ ]]; then LINE=HEAD~$(($(($0-1)))); else LINE=$0; fi; git rebase --interactive --autosquash $LINE'"
   rim  = rebase --interactive --autosquash master
+  ro   = rebase --onto
   rs   = rebase --skip
 
   rf   = reflog --pretty='%cd %h %gd %gs'
