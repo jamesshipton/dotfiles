@@ -15,6 +15,9 @@ export APP_BUNDLE_PATH=~/workarea/neo-ios/tmp/build/Neo-Calabash.app
 # Put bundle on the path
 export PATH="./.bundle/bin:$PATH"
 
+# Put bin on the path
+export PATH="./bin:$PATH"
+
 export PATH="/usr/local/sbin:$PATH"
 
 # added by Anaconda3 4.4.0 installer
