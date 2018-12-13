@@ -205,5 +205,8 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 " javascript mappings
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
-autocmd BufRead,BufNewFile *.json setlocal shiftwidth=4 tabstop=4
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd BufRead,BufNewFile *.json setlocal shiftwidth=2 tabstop=2
+
+" elm mappings
+let g:elm_format_autosave = 1
