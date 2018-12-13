@@ -23,6 +23,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'ElmCast/elm-vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'AndrewRadev/splitjoin.vim'
 
 call vundle#end()            " required
 
@@ -153,6 +154,10 @@ map <leader>tp :tabprevious<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
+
+" Ruby block split/join
+map <leader>bs gS
+map <leader>bj gJ
 
 " Page Scroll
 map <leader>nn <c-F>
