@@ -18,6 +18,9 @@ export PATH="./.bundle/bin:$PATH"
 # Put bin on the path
 export PATH="./bin:$PATH"
 
+# Put node modules bin on the path
+export PATH="./node_modules/.bin:$PATH"
+
 export PATH="/usr/local/sbin:$PATH"
 
 # added by Anaconda3 4.4.0 installer
