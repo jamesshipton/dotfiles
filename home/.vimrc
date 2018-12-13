@@ -105,6 +105,7 @@ vmap <leader>y "*y
 
 " Add save_and_open_page line
 nmap <leader>sa osave_and_open_page;;
+nmap <leader>ss osave_and_open_screenshot;;
 
 " Change surrounding single quotes to double quotes
 nmap <leader>cs cs"'
