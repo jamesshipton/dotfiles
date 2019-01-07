@@ -24,7 +24,6 @@ Plugin 'elixir-editors/vim-elixir'
 Plugin 'ElmCast/elm-vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'yegappan/greplace'
 
 call vundle#end()            " required
 
