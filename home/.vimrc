@@ -131,12 +131,6 @@ let g:rails_projections = {
 " change mapping for the tcomment plugin - toggle comments
 vmap <leader>cc gc
 
-" Comment visual mode selection
-" vmap <leader>cc :s/^/# /<cr>:noh<cr>
-
-" Uncomment visual mode selection
-" vmap <leader>cu :s/# //<cr>
-
 " Highlight lines from cursor
 map <leader>v <C-v>
 
