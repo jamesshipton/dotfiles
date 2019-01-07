@@ -162,7 +162,7 @@ map <leader>p <c-B>
 " CtrlP
 map <leader>g :CtrlP<cr>
 map <leader>f :CtrlPBuffer<cr>
-map <leader>ff :CtrlPClearCache<cr>
+map <leader>z :CtrlPClearCache<cr>
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = '\v[\/](\.bundle|\.git|node_modules|elm|elm-stuff|spec\/vcr_cassettes|tmp)$'
