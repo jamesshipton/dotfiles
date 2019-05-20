@@ -1,31 +1,27 @@
 set nocompatible              " be iMproved, required filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=/Users/james/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
-Plugin 'kien/ctrlp.vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'jgdavey/tslime.vim'
-Plugin 'jamesshipton/vim-rspec'
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'strogonoff/vim-coffee-script'
-Plugin 'rizzatti/dash.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'ElmCast/elm-vim'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'AndrewRadev/splitjoin.vim'
-
-call vundle#end()            " required
+" VIM PLUGINS
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'jgdavey/tslime.vim'
+Plug 'jamesshipton/vim-rspec'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'strogonoff/vim-coffee-script'
+Plug 'rizzatti/dash.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'elixir-editors/vim-elixir'
+Plug 'ElmCast/elm-vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'AndrewRadev/splitjoin.vim'
+call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
