@@ -18,6 +18,7 @@ Plug 'strogonoff/vim-coffee-script'
 Plug 'rizzatti/dash.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 Plug 'ElmCast/elm-vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'AndrewRadev/splitjoin.vim'
@@ -193,3 +194,6 @@ autocmd BufRead,BufNewFile *.json setlocal shiftwidth=2 tabstop=2
 
 " elm mappings
 let g:elm_format_autosave = 1
+
+" elixir formatting
+let g:mix_format_on_save = 1
