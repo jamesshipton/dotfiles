@@ -22,6 +22,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'ElmCast/elm-vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
