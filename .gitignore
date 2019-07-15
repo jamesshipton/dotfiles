@@ -1,0 +1,3 @@
+// ignore vim installed plugins
+/home/.vim/plugged
+/home/.vim/view
