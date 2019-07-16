@@ -5,6 +5,7 @@ _DS_Store
 .bundle/
 tags
 .netrwhist
+.gutctags
 *.swp
 *.swo
 *.swn
