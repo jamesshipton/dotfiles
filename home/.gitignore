@@ -4,6 +4,8 @@ custom_plan.rb
 _DS_Store
 .bundle/
 tags
+tags.lock
+tags.temp
 .netrwhist
 .gutctags
 *.swp
