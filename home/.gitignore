@@ -6,6 +6,7 @@ _DS_Store
 tags
 tags.lock
 tags.temp
+tags.temp.tmp
 .netrwhist
 .gutctags
 *.swp
