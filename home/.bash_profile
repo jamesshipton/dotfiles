@@ -3,14 +3,11 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 fi
 
-# add vi mappings to bash
-set -o vi
-
 ### added by the heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Points to the ios compiled app for calybash testing
-export APP_BUNDLE_PATH=~/workarea/neo-ios/tmp/build/Neo-Calabash.app
+### Put anaconda on the path
+export PATH="/usr/local/anaconda3/bin:$PATH"
 
 # Put bundle on the path
 export PATH="./.bundle/bin:$PATH"
@@ -22,9 +19,6 @@ export PATH="./bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 
 export PATH="/usr/local/sbin:$PATH"
-
-# added by Anaconda3 4.4.0 installer
-export PATH="/Users/jamesshipton/anaconda3/bin:$PATH"
 
 export HISTSIZE=500000
 export HISTCONTROL=ignoreboth:erasedups
@@ -56,6 +50,14 @@ __rbenv_ps1 ()
   printf $rbenv_ruby_version
 }
 
+__gcp_account_ps1 ()
+{
+  if [ -f ".gcloudignore" ]; then
+    gcp_config_name=`cat ~/.config/gcloud/active_config`
+    printf [$gcp_config_name]
+  fi
+}
+
 function show() {
   mate `bundle show $@`;
 }
@@ -73,4 +75,4 @@ function hsg() {
 }
 
 # set 2-line color prompt (with git branch if possible)
-PS1='\n\[\e[1;35m\]\t\[\e[m\] \[\e[1;32m\]\h\[\e[m\]:\[\e[00m\]\[\e[1;34m\]\w\[\e[m\] \[\e[0;35m\]$(__rbenv_ps1)\[\e[m\] \[\e[00m\]\[\e[01;33m\]$(__git_ps1 " (%s)")\[\e[m\]\n\[\e[1;32m\]\u:->\[\e[m\] '
+PS1='\n\[\e[1;35m\]\t\[\e[m\] \[\e[1;32m\]\h\[\e[m\]:\[\e[00m\]\[\e[1;34m\]\w\[\e[m\] \[\e[0;36m\]$(__gcp_account_ps1)\[\e[m\] \[\e[0;35m\]$(__rbenv_ps1)\[\e[m\] \[\e[00m\]\[\e[01;33m\]$(__git_ps1 " (%s)")\[\e[m\]\n\[\e[1;32m\]\u:->\[\e[m\] '
