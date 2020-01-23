@@ -3,9 +3,7 @@ set nocompatible              " be iMproved, required filetype off              
 " VIM PLUGINS
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
@@ -14,15 +12,14 @@ Plug 'jgdavey/tslime.vim'
 Plug 'jamesshipton/vim-rspec'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'strogonoff/vim-coffee-script'
 Plug 'rizzatti/dash.vim'
 Plug 'tomtom/tcomment_vim'
-Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'ElmCast/elm-vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
@@ -44,7 +41,7 @@ au BufNewFile,BufRead {*.test} set ft=sh
 runtime macros/matchit.vim        " Load the matchit plugin.
 
 set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
+set noshowmode                    " Don't display the mode you're in, lightline does this.
 
 set backspace=indent,eol,start    " Intuitive backspacing.
 
@@ -85,6 +82,9 @@ set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 set statusline+=%{gutentags#statusline()}
 
+" lightline status bar
+let g:lightline = { 'colorscheme': 'PaperColor' }
+
 " Colors
 set t_Co=256
 colorscheme default
@@ -96,6 +96,9 @@ map <leader>i mmgg=G`m<cr> " Indenting the whole file
 " Quick saving
 imap ;; <Esc>:w<cr>
 nmap ;; :w<cr>
+
+" tab completion
+imap <Tab> <C-P>
 
 " Dash docs
 nmap <silent> <leader>d <Plug>DashSearch
@@ -197,6 +200,3 @@ autocmd BufRead,BufNewFile *.json setlocal shiftwidth=2 tabstop=2
 
 " elm mappings
 let g:elm_format_autosave = 1
-
-" elixir formatting
-let g:mix_format_on_save = 1
