@@ -20,6 +20,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'itchyny/lightline.vim'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
@@ -99,6 +100,12 @@ nmap ;; :w<cr>
 
 " tab completion
 imap <Tab> <C-P>
+
+" emmet tag completion
+let g:user_emmet_install_global = 0
+let g:user_emmet_mode='i'    "only enable insert mode functions
+autocmd FileType html,eruby EmmetInstall
+imap   <leader>e   <plug>(emmet-expand-abbr)
 
 " Dash docs
 nmap <silent> <leader>d <Plug>DashSearch
