@@ -1,0 +1,4 @@
+envs_dirs:
+  - ./.envs
+env_prompt: ({name})
+changeps1: False
