@@ -37,7 +37,7 @@ __git_ps1 ()
 {
   local b="$(git symbolic-ref HEAD 2>/dev/null)";
   if [ -n "$b" ]; then
-    printf " (%s)" "${b##refs/heads/}";
+    printf "  %s" "${b##refs/heads/}";
   fi
 }
 
@@ -52,14 +52,14 @@ __conda_ps1 ()
 __rbenv_ps1 ()
 {
   rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
-  printf $rbenv_ruby_version
+  printf " $rbenv_ruby_version"
 }
 
 __gcp_account_ps1 ()
 {
   if [ -f ".gcloudignore" ]; then
     gcp_config_name=`cat ~/.config/gcloud/active_config`
-    printf [$gcp_config_name]
+    printf " $gcp_config_name"
   fi
 }
 
