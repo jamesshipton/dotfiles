@@ -33,33 +33,33 @@ source ~/.bash_alias
 # Set git autocompletion and PS1 integration
 source ~/.git-completion.bash
 
-__git_ps1 ()
-{
-  local b="$(git symbolic-ref HEAD 2>/dev/null)";
-  if [ -n "$b" ]; then
-    printf "  %s" "${b##refs/heads/}";
-  fi
-}
-
 __conda_ps1 ()
 {
   python_version=`python --version | sed -e 's/Python //'`
   conda_env_path=$CONDA_DEFAULT_ENV
   conda_env="${conda_env_path##*/}"
-  printf " $python_version-$conda_env"
-}
-
-__rbenv_ps1 ()
-{
-  rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
-  printf " $rbenv_ruby_version"
+  printf "  $python_version-$conda_env  "
 }
 
 __gcp_account_ps1 ()
 {
   if [ -f ".gcloudignore" ]; then
     gcp_config_name=`cat ~/.config/gcloud/active_config`
-    printf " $gcp_config_name"
+    printf " $gcp_config_name  "
+  fi
+}
+
+__rbenv_ps1 ()
+{
+  rbenv_ruby_version=`rbenv version | sed -e 's/ .*//'`
+  printf " $rbenv_ruby_version  "
+}
+
+__git_ps1 ()
+{
+  local b="$(git symbolic-ref HEAD 2>/dev/null)";
+  if [ -n "$b" ]; then
+    printf " %s" "${b##refs/heads/}";
   fi
 }
 
@@ -97,9 +97,9 @@ unset __conda_setup
 # set 2-line color prompt (with git branch if possible)
 PS1='\n\[\e[1;35m\]\t\[\e[m\] \
 \[\e[1;32m\]\h\[\e[m\]:\[\e[00m\]\[\e[1;34m\]\w\[\e[m\] \
-\[\e[0;32m\]$(__conda_ps1)\[\e[m\] \
-\[\e[0;36m\]$(__gcp_account_ps1)\[\e[m\] \
-\[\e[0;35m\]$(__rbenv_ps1)\[\e[m\] \
+\[\e[0;36m\]$(__conda_ps1)\[\e[m\]\
+\[\e[0;32m\]$(__gcp_account_ps1)\[\e[m\]\
+\[\e[0;35m\]$(__rbenv_ps1)\[\e[m\]\
 \[\e[00m\]\[\e[01;33m\]$(__git_ps1 " (%s)")\[\e[m\]\n\
 \[\e[1;32m\]\$:->\[\e[m\] '
 
