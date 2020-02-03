@@ -21,6 +21,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
+Plug 'jupyter-vim/jupyter-vim'
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
@@ -207,3 +208,6 @@ autocmd BufRead,BufNewFile *.json setlocal shiftwidth=2 tabstop=2
 
 " elm mappings
 let g:elm_format_autosave = 1
+
+" jupyter integration
+let g:jupyter_mapkeys = 0
