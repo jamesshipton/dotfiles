@@ -15,3 +15,5 @@ tags.temp.tmp
 *.swn
 .byebug_history
 yarn-error.log
+__pycache__/
+*.py[cod]
