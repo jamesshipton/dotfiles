@@ -176,7 +176,7 @@ map <leader>f :CtrlPBuffer<cr>
 map <leader>z :CtrlPClearCache<cr>
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 0
-let g:ctrlp_custom_ignore = '\v[\/](\.bundle|\.envs|\.git|node_modules|_build|deps|elm|tags|elm-stuff|vcr_cassettes|tmp|\.keep)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.bundle|\.envs|\.git|__pycache__|node_modules|_build|deps|elm|tags|elm-stuff|vcr_cassettes|tmp|\.keep)$'
 
 " CTags mappings
 map <leader>dd <c-]>
