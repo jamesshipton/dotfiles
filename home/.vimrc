@@ -22,6 +22,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'jupyter-vim/jupyter-vim'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
@@ -211,3 +212,14 @@ let g:elm_format_autosave = 1
 
 " jupyter integration
 let g:jupyter_mapkeys = 0
+
+" python-mode
+let g:pymode_options_max_line_length = 99
+let g:pymode_options_colorcolumn = 0
+let g:pymode_motion = 0
+let g:pymode_doc = 0
+let g:pymode_virtualenv = 0
+let g:pymode_run = 0
+let g:pymode_rope = 0
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 0
