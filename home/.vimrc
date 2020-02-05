@@ -36,11 +36,12 @@ set autoread
 " autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufWritePre * if index(['sql'], &ft) < 0 | :%s/\s\+$//e
 
-" Extra Ruby syntax highlighting
+" Extra syntax highlighting
 au BufNewFile,BufRead {Capfile} set ft=ruby
 au BufNewFile,BufRead {*.arb} set ft=ruby
 au BufNewFile,BufRead {*.slim} set ft=ruby
 au BufNewFile,BufRead {*.test} set ft=sh
+au BufNewFile,BufRead {*.html} set ft=htmldjango
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
@@ -109,8 +110,8 @@ imap <Tab> <C-P>
 " emmet tag completion
 let g:user_emmet_install_global = 0
 let g:user_emmet_mode='i'    "only enable insert mode functions
-autocmd FileType html,eruby EmmetInstall
-imap   <leader>e   <plug>(emmet-expand-abbr)
+autocmd FileType html,eruby,htmldjango EmmetInstall
+imap <leader>e <plug>(emmet-expand-abbr)
 
 " Dash docs
 nmap <silent> <leader>d <Plug>DashSearch
