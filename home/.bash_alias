@@ -3,3 +3,5 @@ alias la='ls -lahg'
 alias g='git'
 
 alias gc='gcloud'
+
+alias dj='python manage.py'
