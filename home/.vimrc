@@ -227,6 +227,8 @@ let g:pymode_run = 0
 let g:pymode_rope = 0
 let g:pymode_rope_completion = 0
 let g:pymode_rope_complete_on_dot = 0
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
 
 " jedi
 let g:jedi#goto_command = ""
