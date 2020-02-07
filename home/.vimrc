@@ -24,6 +24,7 @@ Plug 'mattn/emmet-vim'
 Plug 'jupyter-vim/jupyter-vim'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'davidhalter/jedi-vim'
+Plug 'psf/black'
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
@@ -42,6 +43,9 @@ au BufNewFile,BufRead {*.arb} set ft=ruby
 au BufNewFile,BufRead {*.slim} set ft=ruby
 au BufNewFile,BufRead {*.test} set ft=sh
 au BufNewFile,BufRead {*.html} set ft=htmldjango
+
+" run black python formatter on save
+autocmd BufWritePre *.py execute ':Black'
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
@@ -180,7 +184,7 @@ map <leader>f :CtrlPBuffer<cr>
 map <leader>z :CtrlPClearCache<cr>
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 0
-let g:ctrlp_custom_ignore = '\v[\/](\.bundle|\.envs|\.git|__pycache__|node_modules|_build|deps|elm|tags|elm-stuff|vcr_cassettes|tmp|\.keep)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.bundle|\.envs|\.git|staticfiles|__pycache__|node_modules|_build|deps|elm|tags|elm-stuff|vcr_cassettes|tmp|\.keep)$'
 
 " CTags mappings
 map <leader>dd <c-]>
@@ -218,7 +222,7 @@ let g:elm_format_autosave = 1
 let g:jupyter_mapkeys = 0
 
 " python-mode
-let g:pymode_options_max_line_length = 99
+let g:pymode_options_max_line_length = 88
 let g:pymode_options_colorcolumn = 0
 let g:pymode_motion = 0
 let g:pymode_doc = 0
