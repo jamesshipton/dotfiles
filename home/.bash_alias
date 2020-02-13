@@ -5,3 +5,5 @@ alias g='git'
 alias gc='gcloud'
 
 alias dj='python manage.py'
+
+alias pti='ptipython --config-file  ~/.ptipython.py'
