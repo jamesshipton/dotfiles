@@ -1,3 +1,9 @@
+# tmux fix to make sure that PATH is empty before path_helper runs
+if [ -f /etc/profile ]; then
+    PATH=""
+    source /etc/profile
+fi
+
 # Setup rbenv
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
@@ -7,7 +13,7 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 
 ### Put anaconda on the path
-# export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize  # commented out by conda initialize
+# export PATH="/usr/local/anaconda3/bin:$PATH"  # commented out by conda initialize
 
 # Put bundle on the path
 export PATH="./.bundle/bin:$PATH"
