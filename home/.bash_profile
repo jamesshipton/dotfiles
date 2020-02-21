@@ -41,7 +41,7 @@ source ~/.git-completion.bash
 
 __conda_ps1 ()
 {
-  python_version=`python --version | sed -e 's/Python //'`
+  python_version=`python --version 2>&1 | awk '{print $2}'`
   conda_env_path=$CONDA_DEFAULT_ENV
   conda_env="${conda_env_path##*/}"
   printf "  $python_version-$conda_env  "
