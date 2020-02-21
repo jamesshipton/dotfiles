@@ -222,7 +222,7 @@ let g:elm_format_autosave = 1
 let g:jupyter_mapkeys = 0
 
 " python-mode
-let g:pymode_options_max_line_length = 88
+let g:pymode_options_max_line_length = 99
 let g:pymode_options_colorcolumn = 0
 let g:pymode_motion = 0
 let g:pymode_doc = 0
