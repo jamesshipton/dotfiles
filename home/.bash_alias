@@ -1,9 +1,14 @@
 alias la='ls -lahg'
 
+# git
 alias g='git'
 
-alias gc='gcloud'
-
+# django
 alias dj='python manage.py'
 
 alias pti='ptipython --config-file  ~/.ptipython.py'
+
+# gcloud
+alias gc='gcloud '
+alias 'cca'='config configurations activate'
+alias 'ccl'='config configurations list'
