@@ -18,13 +18,13 @@ Plug 'mhinz/vim-mix-format'
 Plug 'ElmCast/elm-vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'jupyter-vim/jupyter-vim'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'davidhalter/jedi-vim'
 Plug 'psf/black'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
