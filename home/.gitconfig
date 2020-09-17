@@ -95,6 +95,6 @@
   ui = true
 
 [credential]
-  helper = osxkeychain
+	helper = store
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
