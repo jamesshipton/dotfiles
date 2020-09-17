@@ -82,7 +82,9 @@ function psg() {
 }
 
 function hsg() {
-  history | grep -v grep | grep "$@" -i --color=auto | ruby -e "ARGF.to_a.map { |match| match.sub(/^(\s)*[0-9]+(\s)+/, '') }.uniq.map { |line| puts line.gsub('$@', \"\e[01;33m$@\e[m\") }";
+  cat .bash_history | nl | sort -k 2 | uniq -f 1 | sort -n | cut -f 2 > temp.txt
+  mv temp.txt .bash_history
+  history | grep -v grep | grep "$@" -i --color=auto
 }
 
 # >>> conda initialize >>>
