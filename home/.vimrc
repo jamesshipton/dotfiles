@@ -20,10 +20,9 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
-Plug 'jupyter-vim/jupyter-vim'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'davidhalter/jedi-vim'
-Plug 'psf/black'
+Plug 'psf/black', { 'tag': '19.10b0' }
 Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
@@ -217,9 +216,6 @@ autocmd BufRead,BufNewFile *.json setlocal shiftwidth=2 tabstop=2
 
 " elm mappings
 let g:elm_format_autosave = 1
-
-" jupyter integration
-let g:jupyter_mapkeys = 0
 
 " python-mode
 let g:pymode_options_max_line_length = 99
