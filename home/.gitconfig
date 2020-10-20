@@ -98,3 +98,5 @@
 	helper = store
 [credential "https://source.developers.google.com"]
 	helper = gcloud.sh
+[http]
+	cookiefile = /Users/james/.gitcookies

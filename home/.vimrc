@@ -45,6 +45,7 @@ au BufNewFile,BufRead {*.html} set ft=htmldjango
 
 " run black python formatter on save
 autocmd BufWritePre *.py execute ':Black'
+let g:black_linelength = 99
 
 runtime macros/matchit.vim        " Load the matchit plugin.
 
