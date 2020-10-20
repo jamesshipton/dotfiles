@@ -22,8 +22,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'davidhalter/jedi-vim'
-Plug 'psf/black', { 'tag': '19.10b0' }
+Plug 'psf/black'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'vim-test/vim-test'
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
@@ -209,7 +210,15 @@ map <leader>s :call RunNearestSpec()<cr>
 map <leader>l :call RunLastSpec()<cr>
 map <leader>a :call RunAllSpecs()<cr>
 map <leader>r :call RunAllRSpecs()<cr>
-map <leader>c :call RunAllCucumbers()<cr>
+" map <leader>c :call RunAllCucumbers()<cr>
+
+" vim test mappings
+nmap <leader>c :TestNearest<cr>
+" nmap <silent> t<C-f> :TestFile<CR>
+" nmap <silent> t<C-s> :TestSuite<CR>
+" nmap <silent> t<C-l> :TestLast<CR>
+" nmap <silent> t<C-g> :TestVisit<CR>
+let test#strategy = "tslime"
 
 " javascript mappings
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
@@ -219,7 +228,7 @@ autocmd BufRead,BufNewFile *.json setlocal shiftwidth=2 tabstop=2
 let g:elm_format_autosave = 1
 
 " python-mode
-let g:pymode_options_max_line_length = 99
+let g:pymode_options_max_line_length = 199
 let g:pymode_options_colorcolumn = 0
 let g:pymode_motion = 0
 let g:pymode_doc = 0
