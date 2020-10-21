@@ -126,7 +126,7 @@ vmap <leader>y "*y
 
 " Add save_and_open_page line
 nmap <leader>sa osave_and_open_page;;
-nmap <leader>ss osave_and_open_screenshot;;
+nmap <leader>ss opage.save_and_open_screenshot();;
 
 " Change surrounding single quotes to double quotes
 nmap <leader>cs cs"'
@@ -205,18 +205,18 @@ map <leader>bb :%bdelete<cr>
 let g:rspec_command = 'call Send_to_Tmux("{spec}\n")'
 
 " vim-rspec mappings
-map <leader>t :call RunCurrentSpecFile()<cr>
-map <leader>s :call RunNearestSpec()<cr>
-map <leader>l :call RunLastSpec()<cr>
-map <leader>a :call RunAllSpecs()<cr>
-map <leader>r :call RunAllRSpecs()<cr>
+" map <leader>t :call RunCurrentSpecFile()<cr>
+" map <leader>s :call RunNearestSpec()<cr>
+" map <leader>l :call RunLastSpec()<cr>
+" map <leader>a :call RunAllSpecs()<cr>
+" map <leader>r :call RunAllRSpecs()<cr>
 " map <leader>c :call RunAllCucumbers()<cr>
 
 " vim test mappings
-nmap <leader>c :TestNearest<cr>
-" nmap <silent> t<C-f> :TestFile<CR>
-" nmap <silent> t<C-s> :TestSuite<CR>
-" nmap <silent> t<C-l> :TestLast<CR>
+nmap <leader>s :TestNearest<cr>
+nmap <leader>t :TestFile<cr>
+nmap <leader>a :TestSuite<cr>
+nmap <leader>l :TestLast<cr>
 " nmap <silent> t<C-g> :TestVisit<CR>
 let test#strategy = "tslime"
 
