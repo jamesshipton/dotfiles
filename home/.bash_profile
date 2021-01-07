@@ -42,9 +42,18 @@ source ~/.git-completion.bash
 __conda_ps1 ()
 {
   python_version=`python --version 2>&1 | awk '{print $2}'`
-  conda_env_path=$CONDA_DEFAULT_ENV
-  conda_env="${conda_env_path##*/}"
-  printf "  $python_version-$conda_env  "
+  if [[ $CONDA_DEFAULT_ENV ]]; then
+    conda_env_path=$CONDA_DEFAULT_ENV
+    conda_env=${conda_env_path##*/}
+    printf "  $python_version-c-$conda_env  "
+  elif [[ $VIRTUAL_ENV ]]; then
+    venv_path=$VIRTUAL_ENV
+    venv_dir=${venv_path%/*}
+    venv_env=${venv_dir##*/}
+    printf "  $python_version-v-$venv_env  "
+  else
+    printf "  $python_version  "
+  fi
 }
 
 __gcp_account_ps1 ()
@@ -115,6 +124,7 @@ cd () { builtin cd "$@" && chpwd; }
 
 chpwd () {
   activate_conda
+  activate_pipenv
 }
 
 activate_conda() {
@@ -143,6 +153,24 @@ activate_conda() {
     conda deactivate
   fi
 }
+
+activate_pipenv() {
+  if [ -d ".venv" ] && [ ! $VIRTUAL_ENV ]; then
+    source $(pipenv --venv)/bin/activate
+  elif [ ! -d ".venv" ] && [ $VIRTUAL_ENV ]; then
+    source deactivate
+  fi
+}
+
+# Setup pyenv
+export PATH="/Users/james/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Setup pipenv
+export PIPENV_VENV_IN_PROJECT=true
+export PIPENV_VERBOSITY=-1
+export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # remove duplicate path entries
 PATH=$(printf "%s" "$PATH" | awk -v RS=':' '!a[$1]++ { if (NR > 1) printf RS; printf $1 }')

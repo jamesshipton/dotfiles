@@ -4,6 +4,7 @@ custom_plan.rb
 _DS_Store
 .bundle/
 .envs/
+.venv/
 tags
 tags.lock
 tags.temp
