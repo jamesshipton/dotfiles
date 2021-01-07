@@ -219,6 +219,7 @@ nmap <leader>a :TestSuite<cr>
 nmap <leader>l :TestLast<cr>
 " nmap <silent> t<C-g> :TestVisit<CR>
 let test#strategy = "tslime"
+let test#python#djangotest#options = '--keepdb'
 
 " javascript mappings
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
