@@ -174,3 +174,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 # remove duplicate path entries
 PATH=$(printf "%s" "$PATH" | awk -v RS=':' '!a[$1]++ { if (NR > 1) printf RS; printf $1 }')
+
+# java path
+export JAVA_HOME_8=$(/usr/libexec/java_home -v1.8)
+export JAVA_HOME_15=$(/usr/libexec/java_home -v15)
+
+export JAVA_HOME=$JAVA_HOME_8
