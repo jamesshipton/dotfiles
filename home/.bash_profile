@@ -113,6 +113,9 @@ activate_pipenv() {
   fi
 }
 
+# Setup pypython
+export PTPYTHON_CONFIG_HOME="/Users/james/.ptpython/"
+
 # Setup pyenv
 export PATH="/Users/james/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
