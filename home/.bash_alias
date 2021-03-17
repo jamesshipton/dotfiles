@@ -6,7 +6,7 @@ alias g='git'
 # django
 alias dj='python manage.py'
 
-alias pti='ptipython --config-file  ~/.ptipython.py'
+alias pt='ptpython'
 
 # gcloud
 alias gc='gcloud '
