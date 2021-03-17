@@ -25,6 +25,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'psf/black'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-test/vim-test'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 syntax enable                     " Turn on syntax highlighting.
