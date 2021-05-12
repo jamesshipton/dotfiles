@@ -27,6 +27,7 @@ export PATH="/usr/local/sbin:$PATH"
 export HISTSIZE=500000
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
+export PROMPT_COMMAND='history -a'
 
 export EDITOR='vim'
 
