@@ -220,7 +220,8 @@ nmap <leader>a :TestSuite<cr>
 nmap <leader>l :TestLast<cr>
 " nmap <silent> t<C-g> :TestVisit<CR>
 let test#strategy = "tslime"
-let test#python#runner = 'djangotest'
+" let test#python#runner = 'djangotest'
+let test#python#runner = 'pytest'
 let test#python#djangotest#options = '--keepdb'
 
 " javascript mappings
