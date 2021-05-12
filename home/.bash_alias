@@ -12,3 +12,7 @@ alias pt='ptpython'
 alias gc='gcloud '
 alias 'cca'='config configurations activate'
 alias 'ccl'='config configurations list'
+
+# terraform
+alias tf='terraform'
+

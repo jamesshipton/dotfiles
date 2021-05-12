@@ -186,7 +186,7 @@ map <leader>f :CtrlPBuffer<cr>
 map <leader>z :CtrlPClearCache<cr>
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 0
-let g:ctrlp_custom_ignore = '\v[\/](\.bundle|\.venv|\.envs|\.git|\.aws-sam|staticfiles|__pycache__|node_modules|_build|deps|elm|tags|elm-stuff|vcr_cassettes|tmp|\.keep)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.bundle|\.venv|\.envs|\.git|\.aws-sam|\.zip|\.terraform|.pytest_cache|staticfiles|__pycache__|node_modules|_build|deps|elm|tags|elm-stuff|vcr_cassettes|tmp|\.keep)$'
 
 " CTags mappings
 map <leader>dd <c-]>
@@ -252,3 +252,7 @@ let g:jedi#documentation_command = ""
 let g:jedi#usages_command = ""
 let g:jedi#completions_command = ""
 let g:jedi#rename_command = ""
+
+" terraform
+let g:terraform_align=0
+let g:terraform_fmt_on_save=0
